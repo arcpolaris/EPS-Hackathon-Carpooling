@@ -2,16 +2,37 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>EPS Carpool Finder</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    
+    <nav>
+        <input type = "text" placeholder="Your Name">
+        <button id = "poolsearch-btn" onclick = "alert('Buddies Found')">Begin PoolSearch&trade;</button>
+        <button id = "poolincrem-btn" onclick = "randomPercent()">I Carpooled Today!</button>
+
+        <a target = "main_frame" id = "data-btn" href = "graph.html">See Data</a>
+        <a target = "main_frame" id = "info-btn" href = "about.html">About Us</a>
+    </nav>
+    <main>
+        <aside>
+        </aside>
+        <iframe id = "main-frame" name = "main_frame" src = "graph.html"></iframe>
+    </main>
+    <svg width = "40" height = "60" fill = "black" stroke = "black" stroke-linecap = "round" id = "thermometer">
+        <line x1 = "10" y1 = "50" x2 = "10" y2 = "10" stroke-width="10"/>
+        <g>
+            <circle cx = "10" cy = "50" r = "7" fill = "red" stroke-width="4"></circle>
+            <line x1 = "10" y1 = "50" x2 = "10" y2 = "10" stroke-width="4" stroke = "red" id = "progress"/>
+        </g>
+    </svg>
 
   <script type="module" src="script.js"></script>
+<p id = "carbon-info">In 2023 the US EPA said that 30% of all carbon emissions were caused by transportation. 50% of all transportation-related carbon emissions were caused by cars and vans. Almost every day Eastside Prep has over five hundred students and over a hundred faculty members arriving to school. So many students, so many faculty members, so much carbon emission. Eastside Prep is a very close community, meaning that you at least live close (or close adjacent) to one or more Eastside Prep students (the same goes for faculty members). With our website, you can take a poll on how you get to Eastside Prep. You can also find fellow Eastside Prep students who live near you and we can help you connect with them (the same goes for faculty members). Every morning you also can vote if you carpooled or not. The more you carpool, the more the poll goes up. When the poll reaches the top, students who had used the function to find a carpool buddy and voted are entered into a prize pool to win cool and fun prizes! (prizes TBD) Eastside Prep will also donate to a charity that helps win the fight against climate change. Bringing down our carbon emissions is crucial. Not only for your survival but for your future children’s survival and for their future children’s survival. It's not just your future that you are ruining, it's everybody's.</p>
 </body>
+    <img id = "popup" src = "Buddys found.png">
 
 </html>

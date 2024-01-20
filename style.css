@@ -1,0 +1,73 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-family: Verdana, Geneva, sans-serif;
+    letter-spacing: -1px;
+    overflow: hidden;
+}
+
+nav{
+    height:30px;
+    border-bottom:solid 1.5px black;
+    font-size: 1.2em;
+    padding: 0px 10px;
+}
+nav > a, form, input{
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+#data-btn, #info-btn{
+    float: right;
+}
+
+#main-frame{
+    display: block;
+    border: none;
+    height:calc(100vh - 31.5px);
+    width: 40vw;
+    border-left: black 2px solid;
+    float: right;
+}
+input, #poolsearch-btn{
+    float: left;
+    position: relative;
+    top: 3px;
+    
+}
+input{
+    height: 19px;
+}
+#poolsearch-btn, #poolincrem-btn{
+    font-weight:bold;
+    height:25px;
+    border-radius: 5px;
+    font-size: 0.75em;
+    border: inset 2px #b3d5d3;
+    background: repeating-linear-gradient(45deg, #d41111, #fd8e26, yellow, #51d251, #00fbff, #9666b7, #e486e4, #d41111 1%);
+    background-size: 10000% 10000%;
+    margin-left:5px;
+}
+#poolsearch-btn:active, #poolincrem-btn:active{
+    border-style: outset;
+}
+#poolsearch-btn:hover, #poolincrem-btn:hover{
+    animation: BackgroundScroll 100s linear infinite normal;
+}
+
+@keyframes BackgroundScroll {
+    0%{background-position:0% 0%}
+    100%{background-position:100% 0%}
+}
+#thermometer{
+    position: absolute;
+    top:40vh;
+    left:57vw;
+    transform: scale(8);
+}
+#carbon-info{
+    padding-left: 5px;
+    width: 40vw;
+    font-size:01em;
+}
